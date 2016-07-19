@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+	
+	<title>Hardy Harris + Media Marketing</title>
+  
+	<!-- Included CSS Files -->
+	<!-- Combine and Compress These CSS Files -->
+	<link rel="stylesheet" href="stylesheets/globals.css">
+	<link rel="stylesheet" href="stylesheets/typography.css">
+	<link rel="stylesheet" href="stylesheets/grid.css">
+	<link rel="stylesheet" href="stylesheets/ui.css">
+	<link rel="stylesheet" href="stylesheets/forms.css">
+	<link rel="stylesheet" href="stylesheets/mobile.css">
+	<link rel="stylesheet" href="stylesheets/flexslider.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- web fonts -->
+    <link rel="stylesheet" href="stylesheets/museosans_500_macroman/stylesheet.css">
+	
+    
+    <!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    
+    
+    <!-- For iPhone 4 -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/h/apple-touch-icon.png">
+    <!-- For iPad 1-->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/m/apple-touch-icon.png">
+    <!-- For iPhone 3G, iPod Touch and Android -->
+    <link rel="apple-touch-icon-precomposed" href="img/l/apple-touch-icon-precomposed.png">
+    <!-- For Nokia -->
+    <link rel="shortcut icon" href="img/l/apple-touch-icon.png">
+    <!-- For everything else -->
+    <link rel="shortcut icon" href="favicon.png">
+    
+    <!--Microsoft. Delete if not required -->
+<meta http-equiv="cleartype" content="on">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if lt IE 7 ]><script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script><![endif]-->
+    
+  <script src="javascripts/jquery.min.js"></script>
+  <script src="javascripts/respond.min.js"></script>
+  <script src="javascripts/jquery.flexslider.js"></script>
+  <script src="javascripts/jquery.fitvids.js"></script>
+  <script src="javascripts/custom.js"></script>
+   
+    <!-- Place in the <head>, after the three links -->
+  <script type="text/javascript" charset="utf-8">
+  $(window).load(function() {
+    $('.flexslider').flexslider();
+  });
+  </script><!-- ends flex slider script -->
+
+<!-- google map -->
+<script src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript">
+  var fortmill = new google.maps.LatLng(35.0073697, -80.9450759);
+  var hardyharris = new google.maps.LatLng(35.0271013, -80.9690979);
+  var marker;
+  var map;
+
+  function initialize() {
+    var mapOptions = {
+      zoom: 8,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      center: fortmill
+    };
+
+    map = new google.maps.Map(document.getElementById("map_canvas"),
+            mapOptions);
+          
+    marker = new google.maps.Marker({
+      map:map,
+      draggable:true,
+      animation: google.maps.Animation.DROP,
+      position: hardyharris
+    });
+    google.maps.event.addListener(marker, 'click', toggleBounce);
+  }
+
+  function toggleBounce() {
+
+    if (marker.getAnimation() != null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
+  }
+</script>
+<!-- end map -->
+
+
+</head>
+<body class="wlw" onLoad="initialize()">
+
+	<!-- container -->
+	
+<div class="container">
+		
+		<div id="header" class="row">
+			<div class="twelve columns">
+                  <div class="four columns">
+                    <h1 class="hide">Hardy Harris media marketing</h1>
+                    <a href="http://www.hardyharris.net"><img src="img/l/HardyHarris_Logo.png" class="logo" alt="hardy harris media marketing"></a>
+                    <p class="wlw">Communicating through a single channel alone is often ineffective and response rates can be alarmingly low. By orchestrating new media like <b>Mobile Text, Email, IM, Voice, and Social Media</b>, you can dramatically increase sales, brand awareness, and return on investment. For the same price others charge for email or mobile marketing alone, you can upgrade to Trumpia which integrates them <strong>ALL</strong>.</p>
+                  </div>
+                  <div id="signup" class="four columns">
+                    <h4>Try it FREE for 15 days!</h4>
+                    <p class="center">No Credit Card Required</p>
+                    <a href="http://hardyharris.net/manageAccount/signup.php" class="nice medium radius blue button">Sign Up Now</a>
+                  </div>
+				  <div class="four columns">
+                  <form method="post" name="loginForm" id="loginForm" class="nice" target="iframePassSearch">
+                      <label for="id">Id</label>
+                      <input id="id" class="input-text" name="id" type="text" placeholder="Your Id" onkeypress= "enter(event)" />
+                      <label for="password">Password</label>
+                      <input id="password" class="input-text" name="password" type="password" placeholder="Your Password" onkeypress= "enter(event)" />
+                      <input name="rememberMe" type="checkbox" id="checkbox" value="y"/>
+                      <label for="checkbox" class="checkbox">Remember Me</label>
+                      <input type="button" class="nice medium radius red button right" value="Sign In" onClick="formSubmit()">
+                      <a href="#" class="forgot" onClick="showPassSearch(event);">Forgot Password?</a>
+                </form>
+                  </div>
+				<hr />
+			</div><!-- end twelve columns -->
+		</div><!-- end row -->
+	</div><!--end container-->
+    
+    <div class="container">	
+		<div id="middlecontent" class="row">
+			<div class="twelve columns">
+				<div class="five columns">
+                  <h1 class="wlw">All-In-One Text Messaging</h1>
+                  <h3 class="wlw">Mobile Text + Keyword + IM + Email + Social Publishing</h3>
+              </div>
+
+			<div class="flexslider six offset-by-one columns">			
+                    <ul class="slides">
+                      <li>
+                        <img src="img/Slide1.png" alt="iphone screen showing text message" />
+                     
+                      </li>
+                      <li>
+                        <img src="img/Slide2.png" alt="iphone screen showing instant message" />
+                        
+                      </li>
+                      <li>
+                        <img src="img/Slide3.png" alt="iphone screen showing facebook, twitter, email and flickr icons"/>
+                       
+                      </li>
+                    </ul>
+				</div><!-- end flexSlider seven columns-->
+			</div><!--end twelve columns -->
+		</div><!--end middlecontent ROW-->
+	</div><!-- container -->
+	
+	<div class="container">
+    	<div id="middle" class="row">
+        <div id="middle-container">
+        	<div class="six columns">
+              <h3 class="wlw">our platform allows you to:</h3>
+                  <ul>
+                      <li>Manage your Mobile Text Marketing Campaign</li>
+                      <li>Develop an email Marketing Plan</li>
+                      <li>Social Networking Widget for your Company Fan Page</li>
+                      <li>SMS Appointment Reminders</li> 
+                      <li>Mobile Coupons</li>
+                      <li>QR Codes</li>
+                  </ul>
+                <h3 class="wlw">why we are the best!</h3>
+                  <ul>
+                      <li>Our Platform allows you to send SMS</li>
+                      <li>Text to Screen</li>
+                      <li>Mobile Coupons</li>
+                      <li>Pictures to Text</li>
+                      <li>And even send Video Text Messages</li>
+                  </ul>
+                <h3 class="wlw">we have solutions for:</h3>
+                  <ul>
+                      <li>Restaurants</li>
+                      <li>Churches</li>
+                      <li>Retail</li>
+                      <li>Clubs and Bars</li>
+                      <li>Promoters</li>
+                      <li>Schools</li>
+                      <li>Real Estate Agencies</li>
+                      <li>Medical Services</li>
+                      <li>Marketing Firms</li>
+                      <li>And you!</li>
+                  </ul>
+    		</div><!--end six columns-->
+            
+            <div class="six columns">
+            	<div class="video"><iframe width="640" height="360" src="http://www.youtube.com/embed/6-SGfHgxLMg" frameborder="0" allowfullscreen></iframe></div>
+            
+            
+        		<h3 class="wlw">companies using this service</h3>
+                    <div id="thumbs" class="row">
+                     <ul class="block-grid three-up">
+                        <li class="companyThumb"><img src="img/ChickFilA.jpg" alt="chick-fil-a logo"></li>
+                        <li class="companyThumb"><img src="img/coldstone_logo.jpg" alt="coldstone logo"></li>
+                        <li class="companyThumb"><img src="img/espn_logo.jpg" alt="espn logo"></li>
+                        <li class="companyThumb"><img src="img/GoldGym.jpg" alt="golds gym logo"></li>
+                        <li class="companyThumb"><img src="img/Harley-Davidson-Logo.jpg" alt="harley davidson logo"></li>
+                        <li class="companyThumb"><img src="img/holidayinn.jpg" alt="holiday inn logo"></li>
+                        <li class="companyThumb"><img src="img/macdonalds.jpg" alt="mcdonalds logo"></li>
+                        <li class="companyThumb"><img src="img/papajohns.jpg" alt="papa johns logo"></li>
+                        <li class="companyThumb"><img src="img/quiznos.jpg" alt="quiznos logo"></li>
+                    </ul><!-- end grid -->
+    		</div><!--end row-->
+        </div><!--end six columns-->
+        <hr />
+        
+        <!--BEGIN CHARTS-->
+    
+    	<div id="chartBG" class="row">
+        	<div class="twelve columns">
+            	<h3 class="wlw center">Select A Plan</h3>
+            	<img src="img/TextWeb.png" alt="pricing chart">
+    		</div><!--end twelve columns-->
+    	</div><!--end row-->
+        
+        <div id="chartBG" class="row">
+        	<div class="twelve columns"><h3></h3>
+            	<img src="img/TextPlans.gif" alt="plan comparison">
+    		</div><!--end twelve columns-->
+    	</div><!--end row-->
+   
+    <!--end CHARTS-->
+
+        <div class="row">
+            <nav id="secNav">
+                  <ul class="secNav">
+                      <li><a href="http://www.hardyharris.net">home</a></li>
+                      <li><a href="/main/termsofuse.php">terms of use</a></li>
+                      <li><a href="/main/privacypolicy_intro.php">privacy policy</a></li>
+                      <li><a href="/main/contactus.php">contact us</a></li>
+                  </ul><!-- end secNav -->
+              </nav>
+        </div><!-- end secNav-->
+        </div><!--end middle container-->
+    	</div><!--end row-->
+    </div><!--end container-->
+    
+    <div class="container">
+    
+    	<div id="footer" class="wlw row">
+        	<div id="footer-container">
+        	<div class="six columns">
+               <div id="map_canvas"></div><!-- end map -->
+        	</div><!--end map six columns-->
+            <div class="six columns">
+            	<h3 class="wlw">Well OK, you Found Us!</h3>
+<p class="wlw">Unlike some of those other companies that offer 'great services' until something goes awry, we don't hide behind the internet. We actually have a physical address and are willing to publish it just in case you need/want to get in touch with us. So send us a note or stop on by the office. We're located in beautiful Fort Mill, South Carolina which is just a stones throw away from Charlotte, North Carolina. </p>
+<p class="wlw">Hardy Harris<br />
+1012 Market Street, Suite 201<br />
+Fort Mill, SC 29708</p> 
+            </div><!--end six columns-->
+          </div><!--ROW-->
+          </div>
+        </div><!--end footer-->
+
+
+	<!-- Included JS Files -->
+	<!-- Combine and Compress These JS Files -->
+	<script src="javascripts/forms.jquery.js"></script>
+	<script src="javascripts/jquery.customforms.js"></script>
+	<script src="javascripts/jquery.placeholder.min.js"></script>
+	<!-- End Combine and Compress These JS Files -->
+	<script src="javascripts/app.js"></script>
+
+		
+</body>
+</html>

@@ -1,0 +1,262 @@
+	/* -------------------------------------------------- 
+	:: Colors
+	COLOURS 
+#fff - white
+#cfd458 - green
+#8ac7e4 - light blue
+#6a6a6a - dark grey
+#aaaaaa - light grey
+#ee2a57 - magenta
+#0086c4 - dark blue
+---------------------------------------------------*/
+
+	/* -------------------------------------------------- 
+	:: VENDOR SPECIFIC
+---------------------------------------------------*/
+
+::-webkit-selection { 
+background : #ee2a57; 
+color : rgb(250,250,250); 
+text-shadow : none; }
+
+::-moz-selection { 
+background : #ee2a57; 
+color : rgb(250,250,250); 
+text-shadow : none; }
+
+::selection { 
+background : #ee2a57; 
+color : rgb(250,250,250); 
+text-shadow : none; }	
+	
+	
+	/* -------------------------------------------------- 
+	:: Misc
+---------------------------------------------------*/
+	.left       { float: left; }
+	.right      { float: right; }
+	.hide     	{ display: none; }
+	.highlight 	{ background: #ff0; }
+	
+	
+	/* -------------------------------------------------- 
+	:: TYPOGRAPHY
+---------------------------------------------------*/
+   h1.wlw,
+   h2.wlw,
+   h3.wlw,
+   h4.wlw,
+   h5.wlw,
+   h6.wlw {
+	font-family : "MuseoSans500", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  p.wlw {
+	font-family : "MuseoSans500", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  #signup h4, #signup p {
+	margin: .4em; 
+	color: #6a6a6a; 
+  }
+  
+  #signup p {
+	font-size: 1.5em;  
+  }
+  
+  #signup h4 {
+	color: #0086c4;
+	text-align: center;  
+  }
+    
+  #middle-container h3  {
+	color: #0086c4;
+	text-transform: capitalize;
+	}
+	
+  #middle-container li {
+	font-weight: normal;
+	list-style: disc inside;
+	line-height: 1em;
+	font-size: 1.125em;
+	}
+  
+  #middlecontent h1  {
+	text-align: center;
+	color: #0086c4;
+	}
+	
+  #middlecontent h3  {
+	text-align: center;
+	color: #6a6a6a;	
+	}
+	
+  #footer h3  {
+	color: #cfd458;
+	text-align: center;
+	text-transform: capitalize;
+	}
+	
+  #footer p  {
+	color: #fff;
+	font-size: 1.125em;	
+	line-height: 1.5em;
+	}
+	
+  .center {
+	text-align: center;	
+	}
+	
+	/* -------------------------------------------------- 
+	:: PAGE STRUCTURE
+---------------------------------------------------*/
+  
+  #header { 
+	background: url(../img/ColorBand.jpg) repeat-x top center;
+	padding-top: 1.5em;
+	}
+		
+  #middle {
+	background: url(../img/ColorBand.jpg) repeat-x center bottom,
+	            url(../img/noise.png) repeat top center,
+				#eaeaea;
+	border-radius: 5px 5px 0px 0px; 
+	-moz-border-radius: 5px 5px 0px 0px; 
+	-webkit-border-radius: 5px 5px 0px 0px; 
+	border: 1px solid #6a6a6a;	
+	}
+	
+  #middle-container li:last-child {
+	margin-bottom: 1.5em;	
+	}
+	
+  #footer-container, #middle-container {
+	padding: 1.5em;
+	}
+	
+  #footer {
+	background: url(../img/map_bg.jpg) repeat;
+	padding-bottom: 1.5em;
+	}
+	
+  #map_canvas {
+	width: 100%;
+	min-height: 300px;	
+	}
+	
+  	
+	/* -------------------------------------------------- 
+	:: LOG-IN FORM / SIGN UP
+---------------------------------------------------*/
+
+  #signup {
+	background:#F1F1F1;
+	/*border: 1px solid #6a6a6a;*/
+	-webkit-box-shadow: 0px 5px 1px 1px rgba(0, 0, 0, .1);
+	-moz-box-shadow: 0px 5px 1px 1px rgba(0, 0, 0, .1);
+	 box-shadow: 0px 5px 1px 1px rgba(0, 0, 0, .1);
+  }
+    
+  #signup .button {
+	margin: 3.5em .5em .5em 25%;  
+  }
+
+  #loginForm {
+	background: rgb(204,204,204);
+	padding: 1.5em;	
+	}
+	
+  .checkbox {
+	display: inline;	
+	}
+	
+  .forgot {
+	display: block;	
+	}
+	
+   a.forgot:visited, a.forgot:hover {
+	color: #ee2a57;  
+  }
+	
+	
+	/* -------------------------------------------------- 
+	:: NAVIGATION
+---------------------------------------------------*/
+
+	#secNav {
+	margin: 1.5em 0;
+	text-align: right;
+	}
+	
+	#secNav li {
+	display: inline;
+	margin-right: 1.5em;
+	}
+	
+	#secNav a {
+	font-size: 1.25em;	
+	}
+	
+	#secNav li a:visited, #secNav li a:hover {
+	color: #ee2a57;
+	}
+	
+		
+	/* -------------------------------------------------- 
+	:: IMAGES
+---------------------------------------------------*/
+	.slides li img {
+	width: 100%;	
+	}
+	
+	#map_canvas img { 
+	max-width: none; 
+	height: auto 
+	}
+	
+	#thumbs img {
+	border: 1px solid #6a6a6a;
+	}
+	
+	.video {
+	margin-bottom: 2em;
+	}
+	
+	/* -------------------------------------------------- 
+	:: MEDIA QUERIES
+---------------------------------------------------*/
+	
+		/* 768px */
+		
+	@media only screen and (max-width: 768px) {
+	#signup {
+	margin-bottom: .5em;	
+	}
+	
+	#signup .button {
+	margin: 3.5em .5em .5em .5em;  
+  }
+
+
+ 	#signup h4, #footer h3 {
+		font-size: 2em;  
+  	}
+
+	#footer {
+	background: #585858;
+	margin-bottom: .5em;	
+	}
+	
+	#footer h3.wlw  {
+	margin-top: 1.5em;	
+	}
+	
+	#secNav {
+	text-align: center;
+	}
+	
+	#secNav a {
+	font-size: 1em;	
+	}
+	
+}
